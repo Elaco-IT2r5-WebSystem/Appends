@@ -1,0 +1,93 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url(https://i.gifer.com/DFHd.gif);
+    background-size:cover;
+    /* min-height: 100vh; */
+}
+
+ul {
+    list-style: none;
+}
+  
+.accordions {
+    max-width: 80%;
+    margin: 120px auto 40px;
+    background: #242d41;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000;
+}
+
+
+
+.accordions li:last-child .accordionbutton {
+    border-bottom: 0;
+}
+
+.accordions li.active .accordionbutton {
+    color: #ff1f1f;
+}
+
+.accordions li.active .accordionbutton  .fa-circle-chevron-down {
+    transform: rotate(180deg);
+}
+.accordionbutton {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 45px;
+    font-size: 20px;
+    border-bottom: 2px solid #2d374d;
+    color: #fffefe;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.accordionbutton:hover{
+    background: #566f82; /* fallback colour */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#27455c), to(#273a47));
+}
+  
+.accordionbutton  i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+
+.accordionbutton .fa-circle-chevron-down {
+    right: 12px;
+    left: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.accordion-items {
+    display: none;
+    background: #2d374d;;
+    transition: all 0.5s ease;
+}
+
+.accordions li.active .accordion-items{
+    display: block;
+}
+
+.accordion-items a {
+    display: block;
+    color: #4993b1;
+    font-weight: 600;
+    padding: 12px 12px 12px 45px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.accordion-items a:hover {
+    background-color: #5c7185;
+    color: #fff;
+  }
